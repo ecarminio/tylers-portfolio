@@ -1,5 +1,3 @@
-import { EnvelopeIcon } from "@heroicons/react/16/solid";
-import { GithubIcon, LinkedInIcon } from "./social-icons";
 
 
 
