@@ -19,16 +19,5 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ message: response.choices[0].message.content }, { status: 200 });
-  } catch (error: any) {
-    console.error("Error occurred:", error);
-
-    if (error.response && error.response.status === 429) {
-      return NextResponse.json(
-        { error: 'API quota exceeded. Please check your usage or billing plan.' },
-        { status: 429 }
-      );
-    }
-
-    return NextResponse.json({ error: 'Unable to fetch response. Please try again later.' }, { status: 500 });
-  }
+  } 
 }
